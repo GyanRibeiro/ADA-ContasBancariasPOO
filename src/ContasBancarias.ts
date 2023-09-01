@@ -74,3 +74,18 @@ interface OperacoesBancarias {
     sacar(valorSaque:number): number;
     depositar(valorDeposito:number): number
 }
+
+export class Banco{
+    private contas: ContaBancaria[] = [];
+
+    //Método para adicionar contas bancárias ao meu Array de contas
+    adicionarContas(conta: ContaBancaria){
+        this.contas.push(conta)
+    }
+
+    //Método para listar minhas contas
+    listarContas() {
+        console.log("Lista de contas: ")
+        console.log(this.contas)
+    }
+}
