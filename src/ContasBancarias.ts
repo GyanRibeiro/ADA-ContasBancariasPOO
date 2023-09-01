@@ -1,11 +1,11 @@
 export default class ContaBancaria implements OperacoesBancarias{
     private _numeroConta: String;
-    private titular: String;
+    private _titular: String;
     private _saldo: number;
 
     constructor (numeroConta: String, titular: String, saldo: number) {
         this._numeroConta = numeroConta;
-        this.titular = titular;
+        this._titular = titular;
         this._saldo = saldo;
     }
 //------------------------------------------- Getters e Setters -------------------------------------
@@ -23,6 +23,14 @@ export default class ContaBancaria implements OperacoesBancarias{
 
     set saldo(saldo: number){
         this._saldo = saldo;
+    }
+
+    get titular(): String {
+        return this._titular;
+    }
+
+    set titular(titular: String) {
+        this._titular = titular;
     }
 
 //--------------------------------------------- Métodos ---------------------------------------------
