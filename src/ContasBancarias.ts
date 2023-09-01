@@ -71,8 +71,8 @@ export class ContaPoupanca extends ContaBancaria implements OperacoesBancarias{
 }
 
 interface OperacoesBancarias {
-    sacar(valorSaque:number): number;
-    depositar(valorDeposito:number): number
+    sacar(valorSaque:number): void;
+    depositar(valorDeposito:number): void;
 }
 
 export class Banco{
